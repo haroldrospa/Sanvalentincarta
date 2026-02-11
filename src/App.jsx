@@ -357,6 +357,28 @@ export default function App() {
               </h3>
             </div>
 
+            {/* Foto de la Pareja en Marco */}
+            <div className="mb-6 mx-auto w-48 h-64 md:w-56 md:h-72 bg-white p-2 md:p-3 shadow-lg transform -rotate-2 hover:rotate-0 transition-transform duration-300 relative border border-gray-200">
+              {/* Pin / Cinta adhesiva (Visual) */}
+              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-rose-400 shadow-sm border border-rose-500 z-10"></div>
+
+              <div className="w-full h-full overflow-hidden border border-gray-100 bg-gray-50 flex items-center justify-center">
+                {/* 
+                    IMPORTANTE: Reemplaza '/src/assets/couple.jpg' con la imagen real de la pareja.
+                    Si no tienes la imagen en assets, guárdala allí con el nombre 'couple.jpg'
+                 */}
+                <img
+                  src="/src/assets/couple.jpg"
+                  alt="Nosotros"
+                  className="w-full h-full object-cover filter sepia-[0.2] contrast-110"
+                  onError={(e) => {
+                    e.target.onerror = null;
+                    e.target.src = 'https://placehold.co/400x600/ffe4e6/9f1239?text=Tu+Foto+Aqui';
+                  }}
+                />
+              </div>
+            </div>
+
             {/* Contenido de Texto */}
             <div className="w-full mb-6 md:mb-8 min-h-[150px] md:min-h-[180px] flex items-center justify-center relative">
               <div className={`transition-all duration-500 transform ${animateQuote ? 'opacity-0 translate-y-2' : 'opacity-100 translate-y-0'}`}>
