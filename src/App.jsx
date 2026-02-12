@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Heart, RefreshCw, Sparkles } from 'lucide-react';
+import coupleImage from './assets/couple.jpg';
 
 const phrases = [
   "Desde que llegaste a mi vida, todo tiene más color. No solo eres mi novio, eres mi mejor amigo, mi cómplice y mi paz. Gracias por cada risa, por cada abrazo que reinicia mi mundo y por amarme tal como soy. Te amo más de lo que imaginas.",
   "A veces me detengo a pensar en la inmensa suerte que tengo de haberte encontrado. En un mundo con millones de personas, tú eres mi elección cada día. Gracias por construir conmigo este amor tan bonito, sano y lleno de magia.",
   "Hoy quiero recordarte lo increíble que eres. Tu bondad, tu esfuerzo y esa forma tan única que tienes de ver la vida me inspiran a ser mejor persona. No importa lo que pase, siempre estaré a tu lado, sosteniendo tu mano.",
   "No necesito un día especial para decirte que te amo, pero hoy aprovecho para recordártelo con más fuerza. Eres mi refugio seguro, mi lugar favorito y la razón de mis sonrisas más sinceras. Mi corazón es tuyo, hoy y siempre.",
-  "Contigo he aprendido que el amor no es solo un sentimiento, es una elección diaria. Y yo te elijo a ti, con tus virtudes y tus manías, en los días buenos y en los no tan buenos. Eres el mejor regalo que me ha dado la vida."
+  "Contigo he aprendido que el amor no es solo un sentimiento, es una elección diaria. Y yo te elijo a ti, con tus virtudes y tus manías, en los días buenos y en los que no tan buenos. Eres el mejor regalo que me ha dado la vida."
 ];
 
 import ScratchCard from './ScratchCard';
@@ -368,7 +369,7 @@ export default function App() {
                     Si no tienes la imagen en assets, guárdala allí con el nombre 'couple.jpg'
                  */}
                 <img
-                  src="/src/assets/couple.jpg"
+                  src={coupleImage}
                   alt="Nosotros"
                   className="w-full h-full object-cover filter sepia-[0.2] contrast-110"
                   onError={(e) => {
